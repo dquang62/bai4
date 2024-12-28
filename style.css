@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+.full-container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+
+}
+
+.header,
+.banner,
+.hot-news,
+.post,
+.footer {
+    max-width: 86%;
+    margin: auto;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 8% 92%;
+    grid-template-rows: 50% 50%;
+}
+
+.logo {
+    grid-row-start: span 2;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.header-top,
+.header-bottom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+}
+
+.header-bottom {
+    background-color: orange;
+}
+
+.header-menu,
+.header-links {
+    width: 100%;
+    height: auto;
+}
+
+.header-links>input {
+    margin-top: 2.5rem;
+    margin-right: 1rem;
+    float: right;
+    width: 25rem;
+    padding: 0.5rem;
+    border: silver 0.1rem solid;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.8rem;
+    overflow: hidden;
+}
+
+.header-top a {
+    color: black;
+    overflow: hidden;
+}
+
+.header-bottom>.header-links {
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
+.header-bottom>.header-links>li {
+    margin: 0 1rem 0 0.8rem;
+}
+
+.header-bottom>.header-links a {
+    font-size: 3.6rem;
+    color: whitesmoke;
+}
+
+.header-bottom>.header-menu a {
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    object-fit: cover cover;
+    height: auto;
+    margin-top: 1.5rem;
+}
+
+.hot-news {
+    display: grid;
+    grid-template-columns: 49% auto auto;
+    grid-template-rows: 56% auto;
+    gap: 1rem;
+    margin-top: 20px;
+
+
+}
+
+.hot-news-1,
+.hot-news-2,
+.hot-news-3,
+.hot-news-4 {
+    position: relative;
+    width: 100%;
+    height: auto;
+   
+}
+
+.hot-news-1 {
+    grid-row-start: span 2;
+}
+
+.hot-news-2 {
+    grid-column-start: span 2;
+}
+
+.hot-news img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hot-news a {
+    position: absolute;
+    left: 0.5rem;
+    bottom: 1rem;
+    color: white;
+
+    font-weight: bold;
+    z-index: 10;
+}
+
+.hot-news-1 a {
+    font-size: 3.5rem;
+}
+
+.hot-news-2 a {
+    font-size: 2.7rem;
+}
+
+.hot-news-3,
+.hot-news-4 {
+    font-size: 1.7rem;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+.post {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 65% auto;
+    gap: 2rem;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.post-title {
+    color: orange;
+    padding: 1rem 0 1rem 0;
+    position: relative;
+}
+
+.post-title::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: orange;
+    width: 6rem;
+    left: 0;
+    bottom: 0;
+}
+
+.news-item {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 30% auto;
+    gap: 2rem;
+}
+
+.news-item-image img {
+    width: 100%;
+    height: auto;
+}
+
+.news-item-title a {
+    text-align: justify;
+    font-size: 2.8rem;
+    color: black;
+    font-weight: bold;
+
+}
+
+.news-item-date {
+    color: gainsboro;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.news-item-content {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.news-item-small-title {
+    margin-top: 2rem;
+}
+
+.news-item-small-title a {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.top-news img {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    background-color: rgb(58, 58, 58);
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 68% auto;
+    gap: 3rem;
+}
+
+.footer-top h1 {
+    margin-left: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: rgb(156, 156, 156);
+}
+
+.footer-top p {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    color: rgb(156, 156, 156);
+    font-size: 1.4rem;
+}
+
+.footer-top ul {
+    display: flex;
+    justify-content: start;
+    margin-left: 2rem;
+}
+
+.footer-top li {
+    margin-right: 1.5rem;
+}
+
+.footer-top a {
+    color: silver;
+    font-size: 3rem;
+}
+.footer-bottom{
+    margin-top: 5rem;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    padding: 1rem 0 1rem 0;
+}
+.footer-bottom p{
+    color: white;
+    margin-left: 1rem;
+}
